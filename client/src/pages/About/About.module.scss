@@ -1,0 +1,47 @@
+@import '../../App.scss';
+
+.About {
+  display: flex;
+  flex-flow: column;
+  width: 96%;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid lighten($font-color, 80%);
+
+  @media (min-width: 600px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 40%;
+  }
+
+  .PhotoContainer {
+    width: 100%;
+    .PhotoItem {
+      width: 100%;
+    }
+  }
+
+  section {
+    h4 {
+      // font-weight: 400;
+      font-style: normal;
+      font-size: 24px;
+      letter-spacing: .075em;
+      line-height: 1.4em;
+      text-transform: uppercase;
+    }
+
+    p {
+      @include font-stack('Proxima Nova');
+      font-weight: 400;
+      font-style: normal;
+      font-size: 17px;
+      letter-spacing: .02em;
+      line-height: 2.2em;
+      text-transform: none;
+      color: #000;
+    }
+  }
+}

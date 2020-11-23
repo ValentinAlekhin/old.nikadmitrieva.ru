@@ -1,0 +1,36 @@
+@import '../../App.scss';
+
+.Parallax {
+  height: 200px;
+
+  @media (min-width: 1280px) {
+    height: 320px;
+  }
+}
+
+.IndexContainer {
+  width: 96%;
+  margin: 0 auto;
+
+  .CardsContainer {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+
+    @media (min-width: 600px)  {
+      width: 90%;
+      margin: 30px auto 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1280px)  {
+      width: 80%;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 2560px)  {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

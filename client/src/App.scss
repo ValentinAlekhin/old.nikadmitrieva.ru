@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url(./fonts/RobotoSlab-Regular.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(./fonts/ProximaNovaCond-Regular.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Din Condensed';
+  src: url(./fonts/PFDinCondensedRegular.ttf) format('truetype');
+  font-display: swap;
+}
+
+
+$font-color: #0C0C0C;
+$font-stack: 'Roboto Slab', sans-serif, Arial;
+$gap: 2vw;
+
+@mixin font-stack($font) {
+  font-family: $font, sans-serif, Arial, "Helvetica Neue", Helvetica;
+}
+
+
+a {
+  text-decoration: none;
+  color: $font-color;
+
+  &:visited {
+    color: $font-color;
+  }
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+body, html {
+  font-size: 16px;
+  color: $font-color;
+  @include font-stack('Din Condensed');
+}
+
+.container {
+  width: 96vw;
+  margin: 0 auto;
+}

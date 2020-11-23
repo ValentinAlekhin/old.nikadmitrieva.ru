@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+.Gallery {
+  margin: 0 15px;
+  border-top: 1px solid lighten($font-color, 80%);
+
+  @media (min-width: 1280px) {
+    margin: 0 10%;
+  }
+
+  .Title {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: .075em;
+    line-height: 1.4em;
+    text-transform: uppercase;
+
+    @media (min-width: 601px) {
+      margin-left: 20%;
+    }
+  }
+
+  .Grid {
+    width: 100%;
+    position: relative;
+    min-height: 20px;
+  }
+
+}

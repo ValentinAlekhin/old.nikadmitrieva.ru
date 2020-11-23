@@ -1,0 +1,20 @@
+@import '../../App.scss';
+
+.Footer {
+  height: 100px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    color: lighten($font-color, 35%);
+    @include font-stack('Proxima Nova');
+    font-weight: 600;
+    font-style: normal;
+    font-size: .8rem;
+    letter-spacing: .2em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+  }
+}

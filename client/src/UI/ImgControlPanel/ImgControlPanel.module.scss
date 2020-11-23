@@ -1,0 +1,32 @@
+.ImgControlPanel {
+  position: absolute;
+  right: 10px;
+  transform: translateY(-150%);
+  transition: transform 200ms;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 1px lighten(#000, 20%);
+  z-index: 10;
+  display: flex;
+
+  .IcoContainer {
+    padding: 5px 3px 2px;
+
+    .Ico {
+      width: 24px;
+      height: 24px;
+      fill: gray;
+
+      &:hover {
+        fill: red;
+      }
+    }
+  }
+
+  
+
+  &.show {
+    top: 10px;
+    transform: translateY(0);
+  }
+}

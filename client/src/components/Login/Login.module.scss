@@ -1,0 +1,22 @@
+.Login {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 400px;
+  background-color: #fff;
+  border-radius: 4px;
+
+  @media (max-width: 600px) {
+    min-width: 96vw;
+  }
+
+  .Form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

@@ -1,0 +1,34 @@
+.GalleryItem {
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: absolute;
+
+  .ImgItem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ImgPlaceholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &.enter {
+      opacity: 0;
+    }
+    &.enter-active {
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+    &.exit {
+      opacity: 1;
+    }
+    &.exit-active {
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+  }
+}

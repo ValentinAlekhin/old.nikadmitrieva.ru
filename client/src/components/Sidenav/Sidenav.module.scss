@@ -1,0 +1,41 @@
+@import '../../App.scss';
+
+.Sidenav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 250px;
+  padding: 36px;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 90;
+  transform: translateX(0px);
+  transition: transform 220ms ease-in;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 15px;
+
+      a {
+        @include font-stack('Proxima Nova');
+        font-weight: 600;
+        font-style: normal;
+        font-size: 13px;
+        letter-spacing: .25em;
+        line-height: 1.8em;
+        text-transform: none;
+        color: rgba(82,82,82,.7);
+      }
+    }
+  }
+
+  &.close {
+    transform: translateX(-250px);
+  }
+}

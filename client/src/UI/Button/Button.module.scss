@@ -1,0 +1,35 @@
+@import "../../App.scss";
+
+.Button {
+  display: inline-block;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 12px 30px;
+  border: 2px solid #222;
+  @include font-stack('Proxima Nova');
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.1s background-color linear, 0.1s color linear;
+
+  &:hover {
+    color: #fff;
+    background-color: #222;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: rgb(170, 170, 170);
+    color: rgb(170, 170, 170);
+    background-color: #fff;
+    cursor: not-allowed;
+  }
+}
