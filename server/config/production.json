@@ -1,9 +1,8 @@
 {
   "port": 3001,
   "jwtSecret": "nikazaebis",
-  "mongoUrl": "mongodb://localhost:27017/nikadmitrieva_prod",
+  "mongoUrl": "mongodb://valentin:KJi99dqu8sFdx1IV@cluster0-shard-00-00.mjs8z.mongodb.net:27017,cluster0-shard-00-01.mjs8z.mongodb.net:27017,cluster0-shard-00-02.mjs8z.mongodb.net:27017/topminers?ssl=true&replicaSet=atlas-twaqjw-shard-0&authSource=admin&retryWrites=true&w=majority",
   "baseUrl": "http://localhost:3000",
   "translateEngine": "yandex",
   "translateKey": "trnsl.1.1.20200425T144214Z.27179e401860f0d4.db1c650e35995d8616f77ef3e63fc749f3647ce0"
 }
-
