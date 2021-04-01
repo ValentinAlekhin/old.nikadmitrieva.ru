@@ -7,34 +7,39 @@ import { getIndexPage } from '../../redux/pages/pagesAction'
 import { setCurrentPage } from '../../redux/navigation/navigationAction'
 import { BarLoader } from 'react-spinners'
 
+import img2 from './images/2.jpg'
+
 const Index = ({
-  getPage, page: { cards },
-  loading, setCurrentPage,
-  loaded
+  getPage,
+  page: { cards },
+  loading,
+  setCurrentPage,
+  loaded,
 }) => {
-  
   useEffect(() => {
-    (async function() {
+    async function start() {
       if (!loaded) await getPage()
-    })()
+    }
+    start()
     setCurrentPage('index')
     // eslint-disable-next-line
   }, [])
 
-  if (loading) return (
-    <div className={classes.IndexContainer}>
-      <BarLoader css={{ width: '100%' }}/>
-    </div>
-  )
+  if (loading)
+    return (
+      <div className={classes.IndexContainer}>
+        <BarLoader css={{ width: '100%' }} />
+      </div>
+    )
 
   return (
     <Fragment>
-      <Parallax bgImage={getRandomParallaxImg(0, 3)} bgImageAlt="Parallax" strength={200}>
+      <Parallax bgImage={img2} bgImageAlt="Parallax" strength={200}>
         <div className={classes.Parallax} />
       </Parallax>
       <div className={classes.IndexContainer}>
         <div className={classes.CardsContainer}>
-          { cards.map(({route, title, titleImg, _id, category}, index) => (
+          {cards.map(({ route, title, titleImg, _id, category }, index) => (
             <GallaryCard
               key={index}
               title={title}
@@ -42,11 +47,11 @@ const Index = ({
               link={`/${category}/${_id}`}
               id={_id}
             />
-          )) }
+          ))}
         </div>
       </div>
     </Fragment>
-  )    
+  )
 }
 
 function mapStateToProps(state) {
@@ -67,6 +72,6 @@ function mapDispatchToProps(dispatch) {
 export default connect(mapStateToProps, mapDispatchToProps)(Index)
 
 function getRandomParallaxImg(min, max) {
-  let rand = min + Math.random() * (max + 1 - min);
-  return require(`../../data/compressed/parallax/${Math.floor(rand)}.jpg`);
+  let rand = min + Math.random() * (max + 1 - min)
+  return [img2][parseInt(rand)]
 }

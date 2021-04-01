@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -28,10 +30,14 @@ async function start() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
-      useFindAndModify: false
+      useFindAndModify: false,
     })
 
-    app.listen(PORT, () => console.log(`Server has been started on port: ${PORT} in ${process.env.NODE_ENV} mode`))
+    app.listen(PORT, () =>
+      console.log(
+        `Server has been started on port: ${PORT} in ${process.env.NODE_ENV} mode`
+      )
+    )
   } catch (err) {
     console.log('Server error:', err)
     process.exit(1)
